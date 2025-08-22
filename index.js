@@ -1,4 +1,6 @@
-console.log("Hello World");
+
+let humanScore = 0;
+let computerScore = 0;
 
 /* Psuedocode:
  * generate a random number 0-2
@@ -16,18 +18,12 @@ function getComputerChoice() {
 }
 
 /* Psuedocode:
- * gets user input (0, 1, or 2)
- * return rock if 0, paper if 1, and scissor otherwise
+ * gets user input and turn it to lowercase
+ * returns modified input
  */
 function getHumanChoice() {
-    let choice = prompt("Type 0 for rock, 1 for paper, 2 for scissors.");
-    if (choice === 0) {
-        return "rock";
-    } else if (choice === 1) {
-        return "paper";
-    } else {
-        return "scissors";
-    }
+    let choice = prompt("Rock, Paper, Scissors?");
+    choice.toLowerCase();
+    return choice;
 }
 
-console.log(getHumanChoice());
