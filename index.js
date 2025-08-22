@@ -1,4 +1,3 @@
-
 let humanScore = 0;
 let computerScore = 0;
 
@@ -27,3 +26,43 @@ function getHumanChoice() {
     return choice;
 }
 
+/*
+ * Plays a single round of rock paper scissors
+ */
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        console.log("Tie! Both players picked " + humanChoice);
+    }
+
+    if (humanChoice === "rock") {
+        if (computerChoice === "scissors") {
+            console.log("You win! " + humanChoice +
+                " beats " + computerChoice);
+            humanScore++;
+        } else {
+            console.log("You lose! " + computerChoice +
+                " beats " + humanChoice);
+            computerScore++;
+        }
+    } else if (humanChoice === "paper") {
+        if (computerChoice === "rock") {
+            console.log("You win! " + humanChoice +
+                " beats " + computerChoice);
+            humanScore++;
+        } else {
+            console.log("You lose! " + computerChoice +
+                " beats " + humanChoice);
+            computerScore++;
+        }
+    } else {
+        if (computerChoice == "paper") {
+            console.log("You win! " + humanChoice +
+                " beats " + computerChoice);
+            humanScore++;
+        } else {
+            console.log("You lose! " + computerChoice +
+                " beats " + humanChoice);
+            computerScore++;
+        }
+    }
+}
